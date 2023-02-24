@@ -1,0 +1,83 @@
+{
+    "TABLE_STAGE": "ENT_&{P_ENVIRONMENT}_LANDING_DB.TRANSITORY.CM_&{P_CODPAIS}_DETAILEVENT",
+    "TABLA_SYSTEM": "ENT_&{P_ENVIRONMENT}_CURATED_DB.CM.CM_DETAILEVENT",
+    "LOAD_STRATEGY": "UPSERT",
+    "TABLE_COLUMNS": [
+          {
+               "NAME": "CODPAIS",
+               "TYPE": "VARCHAR(2)",
+               "MAP": "&{P_CODPAIS}"
+          },
+          {
+               "NAME": "ANIOCAMPANA",
+               "TYPE": "VARCHAR(6)",
+               "MAP": "&{:2}"
+          },
+          {
+               "NAME": "CODIGOPALANCA",
+               "TYPE": "VARCHAR(3)",
+               "MAP": "&{:3}"
+          },
+          {
+               "NAME": "INICIOEVENTO",
+               "TYPE": "VARCHAR(10)",
+               "MAP": "&{:4}"
+          },
+          {
+               "NAME": "FINEVENTO",
+               "TYPE": "VARCHAR(10)",
+               "MAP": "&{:5}"
+          },
+          {
+               "NAME": "DESCRIPCIONEVENTO",
+               "TYPE": "VARCHAR(12)",
+               "MAP": "&{:6}"
+          },
+          {
+               "NAME": "COMENTARIOEVENTO",
+               "TYPE": "VARCHAR(22)",
+               "MAP": "&{:7}"
+          },
+          
+         {
+              "NAME": "FLAGEVENTOOCULTO",
+              "TYPE": "VARCHAR(1)",
+              "MAP": "&{:8}"
+         },
+         {
+              "NAME": "SCENARIOID",
+              "TYPE": "NUMBER(5,0)",
+              "MAP": "&{:9}"
+         },
+         {
+              "NAME": "REACTIONCANDIDATEID",
+              "TYPE": "VARCHAR(30)",
+              "MAP": "&{:10}"
+         },
+         {
+              "NAME": "CREATEDDATESIMULATIONREACTION",
+              "TYPE": "VARCHAR(30)",
+              "MAP": "&{:11}"
+         },
+         {
+              "NAME": "REACTIONFLAG",
+              "TYPE": "VARCHAR(1)",
+              "MAP": "&{:12}"
+         },
+         {
+              "NAME": "PRIORIDADEVENTO",
+              "TYPE": "NUMBER(2,0)",
+              "MAP": "&{:13}"
+         }
+    ],
+    "PRIMARY_KEYS": [
+         "CODPAIS",
+         "ANIOCAMPANA",
+         "CODIGOPALANCA"
+    ],
+    "PARTITIONS": [
+         "CODPAIS",
+         "ANIOCAMPANA",
+         "CODIGOPALANCA"
+    ]
+}

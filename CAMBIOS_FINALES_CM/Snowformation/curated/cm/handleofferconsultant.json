@@ -1,0 +1,84 @@
+{
+    "TABLE_STAGE": "ENT_&{P_ENVIRONMENT}_LANDING_DB.TRANSITORY.CM_&{P_CODPAIS}_HANDLEOFFERCONSULTANT",
+    "TABLA_SYSTEM": "ENT_&{P_ENVIRONMENT}_CURATED_DB.CM.CM_HANDLEOFFERCONSULTANT",
+    "LOAD_STRATEGY": "UPSERT",
+    "TABLE_COLUMNS": [
+         {
+              "NAME": "CODPAIS",
+              "TYPE": "VARCHAR(2)",
+              "MAP": "&{P_CODPAIS}"
+         },
+         {
+              "NAME": "ANIOCAMPANA",
+              "TYPE": "VARCHAR(6)",
+              "MAP": "&{:2}"
+         },
+         {
+              "NAME": "CODEBELISTA",
+              "TYPE": "VARCHAR(10)",
+              "MAP": "&{:3}"
+         },
+         {
+              "NAME": "CODIGOPALANCA",
+              "TYPE": "VARCHAR(3)",
+              "MAP": "&{:4}"
+         },
+         {
+              "NAME": "OFFERID",
+              "TYPE": "NUMBER(10,0)",
+              "MAP": "&{:5}"
+         },
+         {
+              "NAME": "ORDEN",
+              "TYPE": "NUMBER(10,0)",
+              "MAP": "&{:6}"
+         },
+         {
+              "NAME": "SCENARIOID",
+              "TYPE": "NUMBER(10,0)",
+              "MAP": "&{:7}"
+         },
+         {
+              "NAME": "REACTIONCANDIDATEID",
+              "TYPE": "NUMBER(10,0)",
+              "MAP": "&{:8}"
+         },
+         {
+              "NAME": "CREATEDDATESIMULATIONREACTION",
+              "TYPE": "VARCHAR(30)",
+              "MAP": "&{:9}"
+         },
+         {
+              "NAME": "ODDCANDIDATEID",
+              "TYPE": "NUMBER(10,0)",
+              "MAP": "&{:10}"
+         },
+         {
+              "NAME": "DIA",
+              "TYPE": "VARCHAR(10)",
+              "MAP": "&{:11}"
+         },
+         {
+              "NAME": "REACTIONFLAG",
+              "TYPE": "NUMBER(10,0)",
+              "MAP": "&{:12}"
+         },
+         {
+              "NAME": "FLAGMEDIODEVENTA",
+              "TYPE": "VARCHAR(10)",
+              "MAP": "&{:13}"
+         }
+    ],
+    "PRIMARY_KEYS": [
+         "CODPAIS",
+         "ANIOCAMPANA",
+         "CODEBELISTA",
+         "CODIGOPALANCA",
+         "OFFERID",
+         "DIA"
+    ],
+    "PARTITIONS": [
+          "CODPAIS",
+          "ANIOCAMPANA"
+    ]
+}

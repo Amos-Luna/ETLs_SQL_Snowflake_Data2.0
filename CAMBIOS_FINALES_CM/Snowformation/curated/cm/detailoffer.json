@@ -1,0 +1,189 @@
+{
+    "TABLE_STAGE": "ENT_&{P_ENVIRONMENT}_LANDING_DB.TRANSITORY.CM_&{P_CODPAIS}_DETAILOFFER",
+    "TABLA_SYSTEM": "ENT_&{P_ENVIRONMENT}_CURATED_DB.CM.CM_DETAILOFFER",
+    "LOAD_STRATEGY": "UPSERT",
+    "TABLE_COLUMNS": [
+         {
+              "NAME": "INPUTORIGINCODE",
+              "TYPE": "VARCHAR(3)",
+              "MAP": "&{:1}"
+         },
+         {
+              "NAME": "FLAGTACTIC",
+              "TYPE": "VARCHAR(1)",
+              "MAP": "&{:2}"
+         },
+         {
+               "NAME": "FLAGOBLIGATORIO",
+               "TYPE": "NUMBER(1,0)",
+               "MAP": "&{:3}"
+          },
+         {
+              "NAME": "FORMATCODE",
+              "TYPE": "VARCHAR(1)",
+              "MAP": "&{:4}"
+         },
+         {
+               "NAME": "FORMATCODEDSS",
+               "TYPE": "VARCHAR(1)",
+               "MAP": "&{:5}"
+          },
+         {
+              "NAME": "COMENTARIO",
+              "TYPE": "VARCHAR(40)",
+              "MAP": "&{:6}"
+         },
+         {
+              "NAME": "CODVENTA",
+              "TYPE": "VARCHAR(6)",
+              "MAP": "&{:7}"
+         },
+         {
+              "NAME": "CUCPADRE",
+              "TYPE": "VARCHAR(11)",
+              "MAP": "&{:8}"
+         },
+         {
+               "NAME": "CUCOFERTAPADRE",
+               "TYPE": "VARCHAR(11)",
+               "MAP": "&{:9}"
+          },
+          {
+               "NAME": "CUCOFERTAPADREDSS",
+               "TYPE": "VARCHAR(11)",
+               "MAP": "&{:10}"
+          },
+         {
+              "NAME": "CUC",
+              "TYPE": "VARCHAR(11)",
+              "MAP": "&{:11}"
+         },
+         {
+              "NAME": "CODSAP",
+              "TYPE": "VARCHAR(9)",
+              "MAP": "&{:12}"
+         },
+         {
+              "NAME": "PRECIONORMALMN",
+              "TYPE": "NUMBER(15,5)",
+              "MAP": "&{:13}"
+         },
+         {
+              "NAME": "PRECIOOFERTAMN",
+              "TYPE": "NUMBER(15,5)",
+              "MAP": "&{:14}"
+         },
+         {
+              "NAME": "DISCOUNTPERCENTAGETEMINATION",
+              "TYPE": "NUMBER(15,5)",
+              "MAP": "&{:15}"
+         },
+         {
+              "NAME": "SETCOST",
+              "TYPE": "NUMBER(15,5)",
+              "MAP": "&{:16}"
+         },
+         {
+              "NAME": "OFFERID",
+              "TYPE": "NUMBER(7,0)",
+              "MAP": "&{:17}"
+         },
+         {
+              "NAME": "FLAGGAINMATERIAL",
+              "TYPE": "VARCHAR(10)",
+              "MAP": "&{:18}"
+         },
+         {
+              "NAME": "COMPOUNDVARIABLE",
+              "TYPE": "NUMBER(1,0)",
+              "MAP": "&{:19}"
+         },
+         {
+              "NAME": "QUADFACTOR",
+              "TYPE": "NUMBER(2,0)",
+              "MAP": "&{:20}"
+         },
+         {
+              "NAME": "OFFERORIGINID",
+              "TYPE": "NUMBER(5,0)",
+              "MAP": "&{:21}"
+         },
+         {
+              "NAME": "ANIOCAMPANA",
+              "TYPE": "VARCHAR(6)",
+              "MAP": "&{:22}"
+         },
+         {
+              "NAME": "CODPAIS",
+              "TYPE": "VARCHAR(2)",
+              "MAP": "&{P_CODPAIS}"
+         },
+         {
+              "NAME": "SCENARIOID",
+              "TYPE": "NUMBER(5,0)",
+              "MAP": "&{:24}"
+         },
+         {
+              "NAME": "CODVENTAPADRE",
+              "TYPE": "VARCHAR(6)",
+              "MAP": "&{:25}"
+         },
+         {
+              "NAME": "REACTIONCANDIDATEID",
+              "TYPE": "NUMBER(6, 0)",
+              "MAP": "&{:26}"
+         },
+         {
+              "NAME": "CREATEDDATESIMULATIONREACTION",
+              "TYPE": "VARCHAR(30)",
+              "MAP": "&{:27}"
+         },
+         {
+              "NAME": "ODDCANDIDATEID",
+              "TYPE": "NUMBER(6,0)",
+              "MAP": "&{:28}"
+         },
+         {
+              "NAME": "AGRUPADORATO",
+              "TYPE": "VARCHAR(2)",
+              "MAP": "&{:29}"
+         },
+         {
+              "NAME": "REPETITIONFACTOR",
+              "TYPE": "NUMBER(2,0)",
+              "MAP": "&{:30}"
+         },
+         {
+              "NAME": "MARCAOFERTA",
+              "TYPE": "VARCHAR(6)",
+              "MAP": "&{:31}"
+         },
+         {
+              "NAME": "CATEGORIAOFERTA",
+              "TYPE": "VARCHAR(20)",
+              "MAP": "&{:32}"
+         },
+         {
+              "NAME": "TIPOOFERTA",
+              "TYPE": "VARCHAR(70)",
+              "MAP": "&{:33}"
+         },
+         {
+              "NAME": "LINEAOFERTA",
+              "TYPE": "VARCHAR(40)",
+              "MAP": "&{:34}"
+         }
+
+    ],
+    "PRIMARY_KEYS": [
+         "CODPAIS",
+         "ANIOCAMPANA",
+         "OFFERID",
+         "CODVENTA",
+         "CODSAP"
+    ],
+    "PARTITIONS": [
+         "CODPAIS",
+         "ANIOCAMPANA"
+    ]
+}

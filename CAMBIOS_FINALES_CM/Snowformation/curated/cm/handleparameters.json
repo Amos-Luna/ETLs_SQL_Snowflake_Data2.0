@@ -1,0 +1,82 @@
+{
+    "TABLE_STAGE": "ENT_&{P_ENVIRONMENT}_LANDING_DB.TRANSITORY.CM_&{P_CODPAIS}_HANDLEPARAMETERS",
+    "TABLA_SYSTEM": "ENT_&{P_ENVIRONMENT}_CURATED_DB.CM.CM_HANDLEPARAMETERS",
+    "LOAD_STRATEGY": "UPSERT",
+    "TABLE_COLUMNS": [
+         {
+              "NAME": "SCENARIOID",
+              "TYPE": "NUMBER(5,0)",
+              "MAP": "&{:1}"
+         },
+         {
+              "NAME": "DESTESCENARIO",
+              "TYPE": "VARCHAR(20)",
+              "MAP": "&{:2}"
+         },
+         {
+              "NAME": "CODPAIS",
+              "TYPE": "VARCHAR(2)",
+              "MAP": "&{P_CODPAIS}"
+         },
+         {
+              "NAME": "ANIOCAMPANA",
+              "TYPE": "VARCHAR(6)",
+              "MAP": "&{:4}"
+         },
+         {
+              "NAME": "CODIGOPALANCA",
+              "TYPE": "VARCHAR(3)",
+              "MAP": "&{:5}"
+         },
+         {
+              "NAME": "FLAGTACTIC",
+              "TYPE": "VARCHAR(1)",
+              "MAP": "&{:6}"
+         },
+         {
+              "NAME": "FLAGOBLIGATORIO",
+              "TYPE": "VARCHAR(1)",
+              "MAP": "&{:7}"
+         },
+         {
+              "NAME": "DESBOLSA",
+              "TYPE": "VARCHAR(15)",
+              "MAP": "&{:8}"
+         },
+         {
+              "NAME": "QUANTITYOFFERSEVENT",
+              "TYPE": "NUMBER(2,0)",
+              "MAP": "&{:9}"
+         },
+         {
+              "NAME": "REACTIONCANDIDATEID",
+              "TYPE": "NUMBER(6,0)",
+              "MAP": "&{:10}"
+         },
+         {
+              "NAME": "CREATEDDATESIMULATIONREACTION",
+              "TYPE": "VARCHAR(30)",
+              "MAP": "&{:11}"
+         },
+         {
+              "NAME": "ODDCANDIDATEID",
+              "TYPE": "VARCHAR(10)",
+              "MAP": "&{:12}"
+         }
+    ],
+    "PRIMARY_KEYS": [
+         "CODPAIS",
+         "ANIOCAMPANA",
+         "CODIGOPALANCA",
+         "SCENARIOID",
+         "FLAGTACTIC",
+         "FLAGOBLIGATORIO",
+         "DESBOLSA",
+         "ODDCANDIDATEID"
+    ],
+    "PARTITIONS": [
+          "CODPAIS",
+          "ANIOCAMPANA",
+          "CODIGOPALANCA"
+    ]
+}

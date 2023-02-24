@@ -1,0 +1,29 @@
+{
+	"PRIMARY_KEYS": [
+        "CODPAIS",
+        "ANIOCAMPANA",
+		"CODIGOPALANCA"
+	],
+	"TARGET" :
+	[
+		{
+            "TYPE":"S3",
+            "PATH":"@ENT_&{P_ENVIRONMENT}_COMMON_DB.ETL_OBJECTS.EXT_STAGE_SNOW_FUNCTIONAL/analitico/GlueDatabase/functional-migration/edpcm_detailevent",
+            "FORMAT":"file_format = (type = parquet compression = snappy)",
+            "OPTIONS":"max_file_size = 4900000000",
+			"HEADER": "true",
+			"PARTITIONS" : [
+				"CODPAIS",
+				"ANIOCAMPANA",
+				"CODIGOPALANCA"
+			]
+        }
+	],
+	"JOBS":[
+		{
+			"TRIGGER":"CM",
+			"PROCEDURE":"CM/CM_DOM_001A_CargaDetailevent.sql"
+		}
+	],
+	"LAYER":1
+}
